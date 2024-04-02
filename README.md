@@ -3,28 +3,50 @@
 ## What Is `T-REX`?
 
 > [!TIP]
-> `T-REX` (Trivial Record Exchange) facilitates ad-hoc transfer of low-dimensional result data, eliminating the need for manual transcription from laboratory devices to paper or software programs.
+> `T-REX` (Trivial Record Exchange) facilitates ad-hoc transfer of low-dimensional result data, eliminating the need for manual transcription from laboratory devices to paper or software programs. T-REX is enabled through the definition of a simple and lightweight text-based format for data exchange.
 > 
-> Here is an example tare weight and a environmental temperature, formatted using `T-REX`:
+> Here is an example tare weight (250 mg) and a environmental temperature (293.15 K), formatted using `T-REX`:
 > ```
 > TARE$MGM:2.5E2+ENV$KEL:293.15
 > ```
 
 ## Introduction
 
-The `T-REX` serves as ad-hoc transfer for low dimensional result data. It is designed as low entry barrier first stepping stone towards automated lab device data exchange and therefore focuses on simplicity instead of feature-richness. It for example allows to easily transfer a weight value from a balance but by no means is made to transfer a Chromatography data set (for that use case, use a [PAC-ID](https://github.com/ApiniLabs/PAC-ID) that points to the data record in your CDS instead).
+T-REX serves as a versatile instrument for expedient ad-hoc transfer of low-dimensional result data within laboratory settings. Distinguished by its emphasis on simplicity over complexity, T-REX represents an initial step towards the automation of lab device data exchange. Notably, it facilitates uncomplicated transfers, such as weight values from a balance, while acknowledging its limitations for more intricate tasks like the transfer of Chromatography data sets, which are better suited for employment with [PAC-ID](https://github.com/ApiniLabs/PAC-ID), effectively directing users to the corresponding data record in their Chromatography Data System (CDS).
 
-Lab Devices have a lifetime of up to 30 years. Once first devices with standardized API’s are sold, it will still likely take decades until most lab devices found in average labs have such capabilities. The installed base of devices that is capable of displaying QR codes and for which there is still ongoing firmware development however is already fairly large. That installed base is the main target of the T-REX as it brings digitalization benefits that are usable now into the lab as it is today.
+Laboratory devices typically endure lifecycles of up to 30 years. Despite this longevity, the adoption of standardized APIs remains a gradual process, with widespread implementation potentially spanning decades. However, a substantial number of devices already possess the capability to display QR codes, with ongoing firmware development ensuring their continued relevance. T-REX is strategically positioned to target this sizable installed base, offering immediate digitalization benefits within the current laboratory landscape.
 
-The `T-REX` is the latest evolution of ideas previously known as LabQR and ResultQR from the SiLA 2 Core Working Group.
-
-The goals for `T-REX` are:
-
-- Simple and easy to understand, parse and transmit
-- Ability to store into a small QR code due to compatibility with QR code alphanumeric encoding
-- Direct usage as query part of a URL or an extension to a [PAC-ID](https://github.com/ApiniLabs/PAC-ID)
+Derived from the conceptual foundations of LabQR and ResultQR, T-REX emerges as the latest manifestation of innovation from the SiLA 2 Core Working Group.
 
 ## Specification
+
+The `T-REX` format is specified as follows:
+
+- `T-REX`-formatted data is a string of ASCII characters, composed of `segment`s, separated by `+`
+- a `segment` is composed of a `key` and a `value`, separated by `:`
+- The `key` is composed of a `type` and a `unit`, separated by `$`
+- The `vlaue` can be `alphanumeric` or `numeric`
+  - `numeric`: A number, scientific notation allowed. Decimal separator always `.`. Allowed chars `0-9`, `-`, `.`, `E`
+  - `alphanumeric`: Allowed characters `A-Z` (upper case only) `0-9`.
+- The `type` is indicating “what the value refers to”. Best practice is to use a (well-known) English word or abbreviation. Allowed characters `A-Z` (upper case only) `0-9`. If the type is a 2-4 digit numeric code, assume that it is a GS1 Application Identifier.
+- The `unit` is either
+  - a `Unit of Measure Common Code` as defined by UN/CEFACT in REC 20 ([https://unece.org/trade/uncefact/cl-recommendations](https://unece.org/trade/uncefact/cl-recommendations) > REC20 > Latest Revision > Column “CommonCode“ of Annexes I-III Excel File) or 
+  - a hint to a data type as outlined below:
+    - `T.D` for date and time followed by a value in ISO8601 Basic Format further limited to the following options:
+      - Date:
+        - YYYYMMDD, Example: `START$T.D:20231121`
+      - Time:
+        - THHMM, Example: `START$T.D:T0846`
+        - THHMMSS, Example: `START$T.D:T084659`
+        - THHMMSS.SSS , Example: `START$T.D:T084659.956`
+      - Timestamp
+        - Any valid date format followed by any valid time format. Example: `START$T.D:20231121T0846`
+        - (Relative time is represented by any suitable unit of measure instead of type `T.D`) Example: `DURATION$SEC:568`
+    - `T.B` for Booleans followed by `T` (true) or `F` (false) as value. Example: `UNDERVACUUM$T.B:T`
+    - `T.A` for alphanumeric strings followed by a variable length value limited to the character set `A-Z`, `0-9`, `.`. Example: `METHOD$T.A:HELLOWORLD`
+    - `T.X` for arbitrary Base36 encoded data. Allowed characters `A-Z`, `0-9`. Use this as a last resort only.
+    - `E` for error codes (alphanumeric). This type is meant to be used to indicate errors for expected keys, e.g. if a TEMP$KEL is not available because the corresponding sensor was unplugged, TEMP$T.E:NC could be sent.
+    - `X.`-prefixed codes are reserved for future extensions
 
 
 ## Terminology Used
