@@ -3,7 +3,7 @@
 ## What Is `T-REX`?
 
 > [!TIP]
-> `T-REX` (Trivial Record Exchange) streamlines the process or even facilitates ad-hoc transfer of low-dimensional result data, eliminating the need for manual transcription from laboratory devices to paper or software programs.
+> `T-REX` (Trivial Record Exchange) facilitates ad-hoc transfer of low-dimensional result data, eliminating the need for manual transcription from laboratory devices to paper or software programs.
 > 
 > Here is an example tare weight and a environmental temperature, formatted using `T-REX`:
 > ```
