@@ -91,25 +91,48 @@ START$T.D:20240222T1748+DURATION$MIN:0+MODE$T.A:MANUAL
 
 ## Full EBNF Grammar of the T-REX Format
 
-The following section contains the grammar for the T-REX format in [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form) syntax:
+The following section contains the grammar for the T-REX format in [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form) syntax[^2]:
+
+[^2]: Whether a text is a valid `T-REX` can easily be tested using the [EBNF Evaluator](https://mdkrajnak.github.io/ebnftest/)
 
 ```
 trex         = segment , { "+" , segment };
-segment      = key, ":", value ;
-key          = type, "$", unit ;
-value        = number | alphanumeric ;
-type         = alphanumeric ;
-unit         = alphanumeric ;
+segment      = key, "$", typedvalue ;
+key          = alphanumeric, {safechar} ;
+typedvalue   = valnumeric | valalphanum | valbool | valdatetime | valerror ;
+
+valnumeric   = alphanumeric, alphanumeric, [alphanumeric], vsepchar, number ;
+valalphanum  = "T.A", vsepchar, {safechar} ;
+valbool      = "T.B", vsepchar, bool ;
+valdatetime  = "T.D", vsepchar, ( (date, [time]) | time ) ;
+valbinary    = "T.X", vsepchar, alphanumeric ;
+valerror     = "E", vsepchar, {safechar} ;
+
 number       = decimal | scientific ;
 decimal      = integer | ( ["-"] , {digit} , "." , digit , {digit} ) ;
 scientific   = decimal , "E" , integer ;
 integer      = ["-"] , digit, {digit} ;
-digit        = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
-alphanumeric = { letter | digit | "." } ;
+bool         = "T" | "F" ;
+
+vsepchar     = ":" ;
+safechar     = punctuation | alphanumeric ;
+punctuation  = "." | "-" ;
+alphanumeric = letter | digit ;
 letter       = "A" | "B" | "C" | "D" | "E" | "F" | "G"
-             | "H" | "I" | "J" | "K" | "L" | "M" | "N"
-             | "O" | "P" | "Q" | "R" | "S" | "T" | "U"
-             | "V" | "W" | "X" | "Y" | "Z" ;
+              | "H" | "I" | "J" | "K" | "L" | "M" | "N"
+              | "O" | "P" | "Q" | "R" | "S" | "T" | "U"
+              | "V" | "W" | "X" | "Y" | "Z" ;
+digit        = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+
+date         = year, month, day ;
+year         = digit, digit, digit, digit ;
+month        = digit, digit ;
+day          = digit, digit ;
+time         = "T", hours , minutes, [seconds, [ ".",  milliseconds]] ;
+hours        = digit, digit ;
+minutes      = digit, digit ;
+seconds      = digit, digit ;
+milliseconds = digit, digit, digit ;
 ```
 
 
