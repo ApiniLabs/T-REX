@@ -78,8 +78,6 @@ The type MUST either be a `Unit of Measure Common Code` or a hint to a data type
 
 [^1]: Unit of Measure Common Code as defined by UN/CEFACT in REC 20 ([https://unece.org/trade/uncefact/cl-recommendations](https://unece.org/trade/uncefact/cl-recommendations) > REC20 > Latest Revision > Column “CommonCode“ of Annexes I-III Excel File) 
 
-
-
 ## Examples
 
 Example `T-REX`, containing a tare weight (250 mg) and an environmental temperature (293.15 K):
@@ -143,18 +141,18 @@ seconds      = digit, digit ;
 milliseconds = digit, digit, digit ;
 ```
 
+## Formatting `T-REX` as QR Code / `T-REX`as `PAC-ID` Extension
 
+`T-REX`-formatted data can be added to a `PAC-ID`s after a `*` character. Like this, `T-REX`-formatted data can easily be represented as a QR code. 
 
+Example:
+```
+HTTPS://PAC.METTORIUS.COM/DEVICE/21:210263*11$T.D:20231121+METHOD$T.A:BASIC
+```
 
 ## Terminology Used
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) "Key words for use in RFCs to Indicate Requirement Levels".
-
-## FAQ
-
-**Q: PAC-ID vs. T-REX. When to use which?**
-
-**A:** In certain cases it’s not entirely clear what should go into a T-REX and what should be a segment of the PAC-ID itself. For example a GS1 code containing a manufacturing date, that date would be a better fit for T-REX than a ID segment.
 
 ## License
 
