@@ -75,6 +75,8 @@ The `unit` MUST either a `Unit of Measure Common Code` or a hint to a data type 
 
 [^1]: Unit of Measure Common Code as defined by UN/CEFACT in REC 20 ([https://unece.org/trade/uncefact/cl-recommendations](https://unece.org/trade/uncefact/cl-recommendations) > REC20 > Latest Revision > Column “CommonCode“ of Annexes I-III Excel File) 
 
+
+
 ## Examples
 
 Example `T-REX`, containing a tare weight (250 mg) and an environmental temperature (293.15 K):
@@ -93,7 +95,7 @@ The following section contains the grammar for the T-REX format in [EBNF](https:
 
 ```
 trex         = segment , { "+" , segment };
-segment      = key, ";", value ;
+segment      = key, ":", value ;
 key          = type, "$", unit ;
 value        = number | alphanumeric ;
 type         = alphanumeric ;
