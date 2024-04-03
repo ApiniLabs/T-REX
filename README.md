@@ -22,6 +22,8 @@ Derived from the conceptual foundations of LabQR and ResultQR, T-REX emerges as 
 
 The `T-REX` format is specified as follows:
 
+
+
 - `T-REX`-formatted data is a string of ASCII characters, composed of `segment`s, separated by `+`
 - a `segment` is composed of a `key` and a `value`, separated by `:`
 - The `key` is composed of a `type` and a `unit`, separated by `$`
@@ -47,6 +49,31 @@ The `T-REX` format is specified as follows:
     - `T.X` for arbitrary Base36 encoded data. Allowed characters `A-Z`, `0-9`. Use this as a last resort only.
     - `E` for error codes (alphanumeric). This type is meant to be used to indicate errors for expected keys, e.g. if a TEMP$KEL is not available because the corresponding sensor was unplugged, TEMP$T.E:NC could be sent.
     - `X.`-prefixed codes are reserved for future extensions
+
+### EBNF Grammar of the T-REX Format
+
+The following section contains the grammar for the T-REX format in [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form) syntax:
+
+```
+trex         = segment , { "+" , segment };
+segment      = key, ";", value ;
+key          = type, "$", unit ;
+value        = number | alphanumeric ;
+type         = alphanumeric ;
+unit         = alphanumeric ;
+number       = decimal | scientific ;
+decimal      = integer | ( ["-"] , {digit} , "." , digit , {digit} ) ;
+scientific   = decimal , "E" , integer ;
+integer      = ["-"] , digit, {digit} ;
+digit        = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+alphanumeric = { letter | digit | "." } ;
+letter       = "A" | "B" | "C" | "D" | "E" | "F" | "G"
+             | "H" | "I" | "J" | "K" | "L" | "M" | "N"
+             | "O" | "P" | "Q" | "R" | "S" | "T" | "U"
+             | "V" | "W" | "X" | "Y" | "Z" ;
+```
+
+
 
 
 ## Terminology Used
