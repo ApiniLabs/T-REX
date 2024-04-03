@@ -1,6 +1,6 @@
 # T-REX
 
-## `T-REX` in a Nutshell?
+## `T-REX` in a Nutshell
 
 `T-REX` (Trivial Record Exchange) is a simple text-based serialization format. It facilitates ad-hoc transfer of low-dimensional result data. It eliminates the need for manual transcription from laboratory devices to software programs.
 
