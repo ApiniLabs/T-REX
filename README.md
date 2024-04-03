@@ -31,8 +31,8 @@ The railroad diagram above shows a simplified EBNF grammar of the T-REX format. 
 - The `vlaue` can be `alphanumeric` or `numeric`:
   - `numeric`: A integer of decimal number. The decimal separator MUST always be `.`. Writing numbers using scientific notation is allowed. Allowed chars are `0-9`, `-`, `.` and `E`. Note that the `+` character is not allowed, as it is already used as separator.
   - `alphanumeric`: An arbitrary text. Allowed characters are `A-Z` (upper case only), numbers `0-9` and the dot `.`.
-- The `type` is indicating “what the value refers to”. The best practice is to use a (well-known) English word or abbreviation. Allowed characters `A-Z` (upper case only) `0-9`. If the type is a 2-4 digit numeric code, it can be assumed that the `type` denotes a [GS1 Application Identifier](https://ref.gs1.org/ai/). Some example `type`s are listed in the table below.
-- The `unit` MUST either a `Unit of Measure Common Code` or a hint to a data type as outlined in the table below. Note, the table only contains some common examples of units from the `Unit of Measure Common Code`; there are many more defined in the complete list[^1].
+- The `type` is indicating “what the value refers to”. The best practice is to use a (well-known) English word or abbreviation. Allowed characters `A-Z` (upper case only), `0-9` and the dot `.`. If the type is a 2-4 digit numeric code, it can be assumed that the `type` denotes a [GS1 Application Identifier](https://ref.gs1.org/ai/). Some example `type`s are listed in the table below.
+- The `unit` MUST either be a `Unit of Measure Common Code` or a hint to a data type as outlined in the table below. Note, the table only contains some common examples of units from the `Unit of Measure Common Code`; there are many more defined in the complete list[^1].
 
 ### Example `type`s
 
@@ -66,11 +66,11 @@ The `unit` MUST either a `Unit of Measure Common Code` or a hint to a data type 
 | ... |  |  | ... |
 | ... |  |  | ... many more units are defined in Unit of Measure Common Code[^1] ... |
 | ... |  |  | ... |
-| `T.D` | `alphanumeric` | T-REX (this specification) | For date and time followed by a value in ISO8601 Basic Format further limited to the following options:<ul><li> Date: YYYYMMDD, Example: `START$T.D:20231121`</li><li>Time: THHMM, Example: `START$T.D:T0846`, THHMMSS, Example: `START$T.D:T084659`, THHMMSS.SSS , Example: `START$T.D:T084659.956`</li><li> Timestamp: Any valid date format followed by any valid time format. Example: `START$T.D:20231121T0846`</li><li>Note: Relative time is represented by any suitable unit of measure instead of type `T.D`, Example: `DURATION$SEC:568`</li></ul> |
-| `T.B` | `alphanumeric` | T-REX (this specification) | For Booleans followed by `T` (true) or `F` (false) as value. Example: `UNDERVACUUM$T.B:T` |
-| `T.A` | `alphanumeric` | T-REX (this specification) | For alphanumeric strings followed by a variable length value limited to the character set `A-Z`, `0-9`, `.`. Example: `METHOD$T.A:HELLOWORLD` |
-| `T.X` | `alphanumeric` | T-REX (this specification) | For arbitrary Base36 encoded data. Allowed characters `A-Z`, `0-9`. Use this as a last resort only. |
-| `E` | `alphanumeric` | T-REX (this specification) | For error codes (alphanumeric). This type is meant to be used to indicate errors for expected keys, e.g. if a TEMP$KEL is not available because the corresponding sensor was unplugged, TEMP$T.E:NC could be sent. |
+| `T.D` | `alphanumeric` | T-REX (this specification) | For date and time followed by a `value` in ISO8601 Basic Format further limited to the following options:<ul><li> Date: YYYYMMDD, Example: `START$T.D:20231121`</li><li>Time: THHMM, Example: `START$T.D:T0846`, THHMMSS, Example: `START$T.D:T084659`, THHMMSS.SSS , Example: `START$T.D:T084659.956`</li><li> Timestamp: Any valid date format followed by any valid time format. Example: `START$T.D:20231121T0846`</li><li>Note: Relative time is represented by any suitable unit of measure instead of type `T.D`, Example: `DURATION$SEC:568`</li></ul> |
+| `T.B` | `alphanumeric` | T-REX (this specification) | For Booleans followed by `T` (true) or `F` (false) as `value`. Example: `UNDERVACUUM$T.B:T` |
+| `T.A` | `alphanumeric` | T-REX (this specification) | For alphanumeric strings of a variable length, limited to the character set `A-Z`, `0-9`, `.`. Example: `METHOD$T.A:HELLOWORLD` |
+| `T.X` | `alphanumeric` | T-REX (this specification) | For arbitrary [Base36](https://en.wikipedia.org/wiki/Base36) encoded data. Allowed characters are `A-Z` and `0-9`. Use this as a last resort only. |
+| `E` | `alphanumeric` | T-REX (this specification) | For error codes (alphanumeric). This type is meant to be used to indicate errors for expected `key`s, e.g. if a `TEMP$KEL` is not available because the corresponding sensor was unplugged, `TEMP$T.E:NC` could be used. |
 | `X.` | `alphanumeric` | T-REX (this specification) | `X.`-prefixed codes are reserved for future extensions. |
 
 [^1]: Unit of Measure Common Code as defined by UN/CEFACT in REC 20 ([https://unece.org/trade/uncefact/cl-recommendations](https://unece.org/trade/uncefact/cl-recommendations) > REC20 > Latest Revision > Column “CommonCode“ of Annexes I-III Excel File) 
