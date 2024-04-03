@@ -38,7 +38,7 @@ The railroad diagram above shows a simplified EBNF grammar of the T-REX format. 
 
 Any sequence of `alphanumeric` characters is allowed as `type`. Some example `type`s are listed in the table below. The best practice is to use a (well-known) English word or abbreviation. The `type` MAY also be a 2-4 digit numeric code based on a [GS1 Application Identifier](https://ref.gs1.org/ai/). The table lists two example GS1 AIs, however, there are many more available.
 
-| `type` | Source | Description |
+| `type` | Ontology Origin | Description |
 | :-- | :-- | :-- |
 | `TARE` | T-REX (this specification) | A "tare" weight |
 | `ENV` | T-REX (this specification) | Environmental (temperature) |
@@ -54,7 +54,7 @@ Any sequence of `alphanumeric` characters is allowed as `type`. Some example `ty
 
 The `unit` MUST either a `Unit of Measure Common Code` or a hint to a data type as outlined in the table below. Note, the table only contains some common examples of units from the `Unit of Measure Common Code`; there are many more defined in the complete list[^1].
 
-| `unit` | `value` is | Source | Description |
+| `unit` | `value` is | Ontology Origin | Description |
 | :-- | :-- | :-- | :-- | 
 | `MGM` | `numeric` | Unit of Measure Common Code[^1] | For milligram [10⁻⁶ kg] |
 | `CEL` | `numeric` | Unit of Measure Common Code[^1] | For degree celsius, Refer ISO 80000-5 (Quantities and units — Part 5: Thermodynamics) |
