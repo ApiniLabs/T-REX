@@ -27,6 +27,7 @@ Developed from earlier ideas like LabQR and ResultQR by the SiLA 2 Core Working 
 `T-REX`-formatted data consists of a string of ASCII characters, which is made up of individual `segment`s. These `segment`s are separated by `+`. Each `segment` comprises a `key` and a `value`, distinguished by a colon (`:`). Within the `key`, a `type` and a `unit` are combined using a dollar sign (`$`). The following railroad diagram illustrates this:
 
 ![T-REX Railroad Diagram](images/t-rex-railroad-diagram-simple.svg)
+<!-- Created with https://matthijsgroen.github.io/ebnf2railroad/try-yourself.html, downloaded with Chrome SVG Downloader Extension , and beautified with https://inkscape.org/ -->
 
 *A railroad diagram, showing the simplified EBNF grammar of the T-REX format.*
 
