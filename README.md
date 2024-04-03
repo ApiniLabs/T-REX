@@ -31,7 +31,7 @@ The following railroad diagram illustrates this:
 ![T-REX Railroad Diagram](images/t-rex-railroad-diagram-simple.svg)
 <!-- Created with https://matthijsgroen.github.io/ebnf2railroad/try-yourself.html, downloaded with Chrome Extension https://svgexport.io/, and beautified with https://inkscape.org/ -->
 
-*A railroad diagram, showing the simplified EBNF grammar of the T-REX format.*
+*A railroad diagram, showing a simplified EBNF grammar of the T-REX format (valbinary and other production rules and terminals have been left out for simplicity).*
 
 The railroad diagram above shows a simplified EBNF grammar of the T-REX format. The full grammar can be found further down.
 
