@@ -1,22 +1,26 @@
 # T-REX
 
-## What Is `T-REX`?
+## `T-REX` in a Nutshell?
 
-> [!TIP]
-> `T-REX` (Trivial Record Exchange) facilitates ad-hoc transfer of low-dimensional result data, eliminating the need for manual transcription from laboratory devices to paper or software programs. T-REX is enabled through the definition of a simple and lightweight text-based format for data exchange.
-> 
-> Here is an example tare weight (250 mg) and an environmental temperature (293.15 K), formatted using `T-REX`:
-> ```
-> TARE$MGM:2.5E2+ENV$KEL:293.15
-> ```
+`T-REX` (Trivial Record Exchange) is a simple text-based serialization format. It facilitates ad-hoc transfer of low-dimensional result data. It eliminates the need for manual transcription from laboratory devices to software programs.
+
+Here is an example tare weight (250 mg) and an environmental temperature (293.15 K), formatted using `T-REX`:
+```
+TARE$MGM:2.5E2+ENV$KEL:293.15
+```
+
+`T-REX`-formatted data can also be added as an extension to a [`PAC-ID`](https://github.com/ApiniLabs/PAC-ID), like this. `PAC-ID` and `T-REX`-data is separated by an `*`:
+```
+HTTPS://PAC.METTORIUS.COM/DEVICE/21:210263*11$T.D:20231121+METHOD$T.A:BASIC
+```
 
 ## Introduction
 
-`T-REX` serves as a versatile instrument for expedient ad-hoc transfer of low-dimensional result data within laboratory settings. Distinguished by its emphasis on simplicity over complexity, `T-REX` represents an initial step towards the automation of lab device data exchange. Notably, it facilitates uncomplicated transfers, such as weight values from a balance, while acknowledging its limitations for more intricate tasks like the transfer of Chromatography data sets, which are better suited for employment with [PAC-ID](https://github.com/ApiniLabs/PAC-ID), effectively directing users to the corresponding data record in their Chromatography Data System (CDS).
+`T-REX` is a handy tool designed for quickly sharing simple data results in labs. It's straightforward to use, focusing on ease rather than complexity, and it's a step toward automating how lab devices share data. While it's great for simple transfers like weighing values, it may not handle complex tasks like transferring detailed Chromatography data well. For that, it's better to use [`PAC-ID`](https://github.com/ApiniLabs/PAC-ID), which guides users to the relevant data in their Chromatography Data System (CDS).
 
-Laboratory devices typically endure lifecycles of up to 30 years. Despite this longevity, the adoption of standardized APIs remains a gradual process, with widespread implementation potentially spanning decades. However, a substantial number of devices already possess the capability to display QR codes, with ongoing firmware development ensuring their continued relevance. `T-REX` is strategically positioned to target this sizable installed base, offering immediate digitalization benefits within the current laboratory landscape.
+Lab equipment can last up to 30 years, but it takes time for standardized interfaces to become widespread. However, many devices can already display QR codes, and updates to their software keep them useful. `T-REX` is designed to work with these devices, bringing immediate digitalization benefits to labs.
 
-Refined from the initial concepts of LabQR and ResultQR by the [SiLA 2 Core Working Group](https://sila-standard.com/standards/), `T-REX` represents the latest evolution in innovation.
+Developed from earlier ideas like LabQR and ResultQR by the SiLA 2 Core Working Group, `T-REX` represents the latest innovation in lab data sharing.
 
 ## Specification
 
