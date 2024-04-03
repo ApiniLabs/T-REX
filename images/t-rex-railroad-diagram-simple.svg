@@ -11,6 +11,13 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs162" />
+  <rect
+     style="fill:#ffffff;stroke:none;stroke-width:1.50383;stroke-dasharray:4.51148, 1.50383"
+     id="rect901"
+     width="467.5"
+     height="168"
+     x="0"
+     y="0" />
   <path
      d="m 20.5,81.5 v 20 m 0,-10 h 20"
      stroke="#000000"
