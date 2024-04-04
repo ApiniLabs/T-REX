@@ -6,422 +6,382 @@
    height="130"
    version="1.1"
    id="svg36"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs36" />
-  <g
-     transform="translate(0.5,0.5)"
-     id="g36">
-    <g
-       id="g1">
-      <path
-         d="M 20,51 V 71 M 20,61 H 40"
-         stroke="#000000"
-         fill-opacity="0"
-         fill="#000000"
-         stroke-width="3px"
-         id="path1" />
-    </g>
-    <path
-       d="M 40,61 H 50"
-       stroke="#000000"
-       fill-opacity="0"
-       fill="#000000"
-       stroke-width="3px"
-       id="path2" />
-    <g
-       id="g34">
-      <path
-         d="m 50,61 v 0"
-         stroke="#000000"
-         fill-opacity="0"
-         fill="#000000"
-         stroke-width="3px"
-         id="path3" />
-      <path
-         d="m 389,61 v 0"
-         stroke="#000000"
-         fill-opacity="0"
-         fill="#000000"
-         stroke-width="3px"
-         id="path4" />
-      <path
-         d="M 50,61 H 60"
-         stroke="#000000"
-         fill-opacity="0"
-         fill="#000000"
-         stroke-width="3px"
-         id="path5" />
-      <g
-         id="g30">
-        <path
-           d="m 60,61 v 0"
-           stroke="#000000"
-           fill-opacity="0"
-           fill="#000000"
-           stroke-width="3px"
-           id="path6" />
-        <path
-           d="m 379,61 v 0"
-           stroke="#000000"
-           fill-opacity="0"
-           fill="#000000"
-           stroke-width="3px"
-           id="path7" />
-        <rect
-           x="60"
-           y="42"
-           width="319"
-           height="38"
-           rx="10"
-           ry="10"
-           class="group-box"
-           stroke="#808080"
-           fill="none"
-           stroke-width="3px"
-           id="rect7" />
-        <g
-           id="g28">
-          <path
-             d="M 60,61 H 70"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path8" />
-          <path
-             d="m 369,61 h 10"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path9" />
-          <g
-             class="terminal"
-             id="g11">
-            <path
-               d="m 70,61 v 0"
-               stroke="#000000"
-               fill-opacity="0"
-               fill="#000000"
-               stroke-width="3px"
-               id="path10" />
-            <path
-               d="m 115.5,61 v 0"
-               stroke="#000000"
-               fill-opacity="0"
-               fill="#000000"
-               stroke-width="3px"
-               id="path11" />
-            <rect
-               x="70"
-               y="50"
-               width="45.5"
-               height="22"
-               rx="10"
-               ry="10"
-               stroke="#000000"
-               fill="#feffdf"
-               stroke-width="3px"
-               id="rect11" />
-            <text
-               font-family="Calibri, Calibri_MSFontService, sans-serif"
-               x="81.746094"
-               y="64.351562"
-               id="text11">key</text>
-          </g>
-          <path
-             d="m 115.5,61 h 10"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path12" />
-          <path
-             d="m 125.5,61 h 10"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path13" />
-          <g
-             class="terminal"
-             id="g15">
-            <path
-               d="m 135.5,61 v 0"
-               stroke="#000000"
-               fill-opacity="0"
-               fill="#000000"
-               stroke-width="3px"
-               id="path14" />
-            <path
-               d="m 164,61 v 0"
-               stroke="#000000"
-               fill-opacity="0"
-               fill="#000000"
-               stroke-width="3px"
-               id="path15" />
-            <rect
-               x="135.5"
-               y="50"
-               width="28.5"
-               height="22"
-               rx="10"
-               ry="10"
-               stroke="#000000"
-               fill="#feffdf"
-               stroke-width="3px"
-               id="rect15" />
-            <text
-               font-family="Calibri, Calibri_MSFontService, sans-serif"
-               x="145.89746"
-               y="64.55957"
-               id="text15">$</text>
-          </g>
-          <path
-             d="m 164,61 h 10"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path16" />
-          <path
-             d="m 174,61 h 10"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path17" />
-          <g
-             class="terminal"
-             id="g19">
-            <path
-               d="m 184,61 v 0"
-               stroke="#000000"
-               fill-opacity="0"
-               fill="#000000"
-               stroke-width="3px"
-               id="path18" />
-            <path
-               d="m 238,61 v 0"
-               stroke="#000000"
-               fill-opacity="0"
-               fill="#000000"
-               stroke-width="3px"
-               id="path19" />
-            <rect
-               x="184"
-               y="50"
-               width="54"
-               height="22"
-               rx="10"
-               ry="10"
-               stroke="#000000"
-               fill="#feffdf"
-               stroke-width="3px"
-               id="rect19" />
-            <text
-               font-family="Calibri, Calibri_MSFontService, sans-serif"
-               x="198.18945"
-               y="64.005859"
-               id="text19">type</text>
-          </g>
-          <path
-             d="m 238,61 h 10"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path20" />
-          <path
-             d="m 248,61 h 10"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path21" />
-          <g
-             class="terminal"
-             id="g23">
-            <path
-               d="m 258,61 v 0"
-               stroke="#000000"
-               fill-opacity="0"
-               fill="#000000"
-               stroke-width="3px"
-               id="path22" />
-            <path
-               d="m 286.5,61 v 0"
-               stroke="#000000"
-               fill-opacity="0"
-               fill="#000000"
-               stroke-width="3px"
-               id="path23" />
-            <rect
-               x="258"
-               y="50"
-               width="28.5"
-               height="22"
-               rx="10"
-               ry="10"
-               stroke="#000000"
-               fill="#feffdf"
-               stroke-width="3px"
-               id="rect23" />
-            <text
-               font-family="Calibri, Calibri_MSFontService, sans-serif"
-               x="269.52246"
-               y="64.272461"
-               id="text23">:</text>
-          </g>
-          <path
-             d="m 286.5,61 h 10"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path24" />
-          <path
-             d="m 296.5,61 h 10"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path25" />
-          <g
-             class="terminal"
-             id="g27">
-            <path
-               d="m 306.5,61 v 0"
-               stroke="#000000"
-               fill-opacity="0"
-               fill="#000000"
-               stroke-width="3px"
-               id="path26" />
-            <path
-               d="m 369,61 v 0"
-               stroke="#000000"
-               fill-opacity="0"
-               fill="#000000"
-               stroke-width="3px"
-               id="path27" />
-            <rect
-               x="306.5"
-               y="50"
-               width="62.5"
-               height="22"
-               rx="10"
-               ry="10"
-               stroke="#000000"
-               fill="#feffdf"
-               stroke-width="3px"
-               id="rect27" />
-            <text
-               font-family="Calibri, Calibri_MSFontService, sans-serif"
-               x="323.14258"
-               y="65.467773"
-               id="text27">value</text>
-          </g>
-        </g>
-        <g
-           id="g29">
-          <path
-             d="m 60,31 v 0"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path28" />
-          <path
-             d="m 119,31 v 0"
-             stroke="#000000"
-             fill-opacity="0"
-             fill="#000000"
-             stroke-width="3px"
-             id="path29" />
-          <a
-             xlink:href="#segment"
-             id="a29">
-            <text
-               font-family="Calibri, Calibri_MSFontService, sans-serif"
-               x="89.5"
-               y="36"
-               class="comment"
-               id="text29">segment</text>
-          </a>
-        </g>
-      </g>
-      <path
-         d="m 379,61 h 10"
-         stroke="#000000"
-         fill-opacity="0"
-         fill="#000000"
-         stroke-width="3px"
-         id="path30" />
-      <path
-         d="M 60,61 A 10,10 0 0 0 50,71 v 18 a 10,10 0 0 0 10,10"
-         stroke="#000000"
-         fill-opacity="0"
-         fill="#000000"
-         stroke-width="3px"
-         id="path31" />
-      <g
-         class="terminal"
-         id="g33">
-        <path
-           d="M 60,99 H 205.25"
-           stroke="#000000"
-           fill-opacity="0"
-           fill="#000000"
-           stroke-width="3px"
-           id="path32" />
-        <path
-           d="M 233.75,99 H 379"
-           stroke="#000000"
-           fill-opacity="0"
-           fill="#000000"
-           stroke-width="3px"
-           id="path33" />
-        <rect
-           x="205.25"
-           y="88"
-           width="28.5"
-           height="22"
-           rx="10"
-           ry="10"
-           stroke="#000000"
-           fill="#feffdf"
-           stroke-width="3px"
-           id="rect33" />
-        <text
-           font-family="Calibri, Calibri_MSFontService, sans-serif"
-           x="214.58984"
-           y="102.82031"
-           id="text33">+</text>
-      </g>
-      <path
-         d="M 379,99 A 10,10 0 0 0 389,89 V 71 A 10,10 0 0 0 379,61"
-         stroke="#000000"
-         fill-opacity="0"
-         fill="#000000"
-         stroke-width="3px"
-         id="path34" />
-    </g>
-    <path
-       d="m 389,61 h 10"
-       stroke="#000000"
-       fill-opacity="0"
-       fill="#000000"
-       stroke-width="3px"
-       id="path35" />
-    <path
-       d="m 399,61 h 20 m 0,-10 v 20"
-       stroke="#000000"
-       fill-opacity="0"
-       fill="#000000"
-       stroke-width="3px"
-       id="path36" />
-  </g>
+  <rect
+     style="fill:#ffffff;stroke-width:1.50213;stroke-miterlimit:4;stroke-dasharray:4.50639, 1.50213;stroke-dashoffset:0"
+     id="rect1133"
+     width="439"
+     height="130"
+     x="0"
+     y="0" />
+  <path
+     d="m 20.5,51.5 v 20 m 0,-10 h 20"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path1" />
+  <path
+     d="m 40.5,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path2" />
+  <path
+     d="m 50.5,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path3" />
+  <path
+     d="m 389.5,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path4" />
+  <path
+     d="m 50.5,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path5" />
+  <path
+     d="m 60.5,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path6" />
+  <path
+     d="m 379.5,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path7" />
+  <rect
+     x="60.5"
+     y="42.5"
+     width="319"
+     height="38"
+     rx="10"
+     ry="10"
+     class="group-box"
+     stroke="#808080"
+     fill="none"
+     stroke-width="3px"
+     id="rect7"
+     style="stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:4.5,1.5;stroke-dashoffset:0" />
+  <path
+     d="m 60.5,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path8" />
+  <path
+     d="m 369.5,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path9" />
+  <path
+     d="m 70.5,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path10" />
+  <path
+     d="m 116,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path11" />
+  <rect
+     x="70.5"
+     y="50.5"
+     width="45.5"
+     height="22"
+     rx="10"
+     ry="10"
+     stroke="#000000"
+     fill="#feffdf"
+     stroke-width="3px"
+     id="rect11" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     x="84.707031"
+     y="64.851562"
+     id="text11">key</text>
+  <path
+     d="m 116,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path12" />
+  <path
+     d="m 126,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path13" />
+  <path
+     d="m 136,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path14" />
+  <path
+     d="m 164.5,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path15" />
+  <rect
+     x="136"
+     y="50.5"
+     width="28.5"
+     height="22"
+     rx="10"
+     ry="10"
+     stroke="#000000"
+     fill="#feffdf"
+     stroke-width="3px"
+     id="rect15" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     x="147.23828"
+     y="65.05957"
+     id="text15">$</text>
+  <path
+     d="m 164.5,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path16" />
+  <path
+     d="m 174.5,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path17" />
+  <path
+     d="m 184.5,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path18" />
+  <path
+     d="m 238.5,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path19" />
+  <rect
+     x="184.5"
+     y="50.5"
+     width="54"
+     height="22"
+     rx="10"
+     ry="10"
+     stroke="#000000"
+     fill="#feffdf"
+     stroke-width="3px"
+     id="rect19" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     x="200.82715"
+     y="64.382812"
+     id="text19">type</text>
+  <path
+     d="m 238.5,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path20" />
+  <path
+     d="m 248.5,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path21" />
+  <path
+     d="m 258.5,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path22" />
+  <path
+     d="m 287,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path23" />
+  <rect
+     x="258.5"
+     y="50.5"
+     width="28.5"
+     height="22"
+     rx="10"
+     ry="10"
+     stroke="#000000"
+     fill="#feffdf"
+     stroke-width="3px"
+     id="rect23" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     x="271.03906"
+     y="64.772461"
+     id="text23">:</text>
+  <path
+     d="m 287,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path24" />
+  <path
+     d="m 297,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path25" />
+  <path
+     d="m 307,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path26" />
+  <path
+     d="m 369.5,61.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path27" />
+  <rect
+     x="307"
+     y="50.5"
+     width="62.5"
+     height="22"
+     rx="10"
+     ry="10"
+     stroke="#000000"
+     fill="#feffdf"
+     stroke-width="3px"
+     id="rect27" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     x="325.42676"
+     y="65.967773"
+     id="text27">value</text>
+  <path
+     d="m 60.5,31.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path28" />
+  <path
+     d="m 119.5,31.5 v 0"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path29" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     x="90"
+     y="36.5"
+     class="comment"
+     id="text29">segment</text>
+  <path
+     d="m 379.5,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path30" />
+  <path
+     d="m 60.5,61.5 a 10,10 0 0 0 -10,10 v 18 a 10,10 0 0 0 10,10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path31" />
+  <path
+     d="M 60.5,99.5 H 205.75"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path32" />
+  <path
+     d="M 234.25,99.5 H 379.5"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path33" />
+  <rect
+     x="205.75"
+     y="88.5"
+     width="28.5"
+     height="22"
+     rx="10"
+     ry="10"
+     stroke="#000000"
+     fill="#feffdf"
+     stroke-width="3px"
+     id="rect33" />
+  <text
+     font-family="Calibri, Calibri_MSFontService, sans-serif"
+     x="217.01172"
+     y="103.32031"
+     id="text33">+</text>
+  <path
+     d="m 379.5,99.5 a 10,10 0 0 0 10,-10 v -18 a 10,10 0 0 0 -10,-10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path34" />
+  <path
+     d="m 389.5,61.5 h 10"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path35" />
+  <path
+     d="m 399.5,61.5 h 20 m 0,-10 v 20"
+     stroke="#000000"
+     fill-opacity="0"
+     fill="#000000"
+     stroke-width="3px"
+     id="path36" />
 </svg>
