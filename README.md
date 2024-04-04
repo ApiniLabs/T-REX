@@ -2,7 +2,7 @@
 
 ## `T-REX` in a Nutshell
 
-`T-REX` (Trivial Record Exchange) is a simple text-based serialization format. It facilitates ad-hoc transfer of low-dimensional result data. It eliminates the need for manual transcription from laboratory devices to software programs.
+`T-REX` (**T**rivial **R**ecord **Ex**change) is a simple text-based serialization format. It facilitates ad-hoc transfer of low-dimensional result data. It eliminates the need for manual transcription from laboratory devices to software programs.
 
 Here is an example tare weight (250 mg) and an environmental temperature (293.15 K), formatted using `T-REX`:
 ```
