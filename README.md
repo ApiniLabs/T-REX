@@ -4,7 +4,7 @@
 
 `T-REX` (**T**rivial **R**ecord **Ex**change) is a simple text-based serialization format. It is purpose-built for replacing manual transcription scenarios with easy to implement ad-hoc data transmissions.
 
-Here is an example tare weight (250 mg) and an environmental temperature (293.15 K), formatted using `T-REX`:
+Here is an example containing a tare weight (250 mg) and an environmental temperature (293.15 K), formatted using `T-REX`:
 
 ```
 TARE$MGM:2.5E2+ENV$KEL:293.15
@@ -16,12 +16,9 @@ TARE$MGM:2.5E2+ENV$KEL:293.15
 HTTPS://PAC.METTORIUS.COM/DEVICE/21:210263/RNR:23*11$T.D:20231121+METHOD$T.A:BASIC
 ```
 
-This combination results in a globally uniqe identifier referencing the full data record (`PAC-ID`) while also providing directly accessible summarized result data (`T-REX`). Any form of transmission suitable for an URL can be used - in its simplest case this is a QR code.
-
+This combination results in a globally uniqe identifier referencing the full data record (`PAC-ID`) while also providing directly accessible summarized result data (`T-REX`).
 
 Other smart building blocks like [PAC-ID Resolver](https://github.com/ApiniLabs/pac-id-resolver) extend the capabilities even further.
-
-
 
 ## Introduction
 
@@ -120,7 +117,7 @@ typedvalue   = (numericunit, tvseparator, numericvalue)
 numericunit  = alphanumeric, alphanumeric, [alphanumeric]; (* Unit of Measure Common Code as defined by UN/CEFACT in REC 20 *)
 numericvalue = decimal | scientific ;
 texttype     = "T.A";
-textvalue    = punctuation | alphanumeric ;
+textvalue    = { punctuation | alphanumeric };
 booltype     = "T.B";
 boolvalue    = "T" | "F" ;
 datetype     = "T.D";
@@ -128,13 +125,13 @@ datevalue    = (date, [time]) | time ; (* Date and time are in ISO8601 Basic For
 binarytype   = "T.X";
 binaryvalue  = base36 ; (* Binary data is encoded with Base36. *)
 error        = "E" ;
-errorvalue   = punctuation | alphanumeric ;
+errorvalue   = { punctuation | alphanumeric } ;
 
 
 decimal      = integer | ( ["-"] , {digit} , "." , digit , {digit} ) ;
 scientific   = decimal , "E" , integer ;
 integer      = ["-"] , digit, {digit} ;
-base36       = alphanumeric ;
+base36       = { alphanumeric } ;
 date         = year, month, day ;
 time         = "T", hours , minutes, [seconds, [ ".",  milliseconds]] ;
 
