@@ -127,6 +127,7 @@
                stroke-width="3px"
                id="rect11" />
             <text
+               font-family="Calibri, Calibri_MSFontService, sans-serif"
                x="81.746094"
                y="64.351562"
                id="text11">key</text>
@@ -174,6 +175,7 @@
                stroke-width="3px"
                id="rect15" />
             <text
+               font-family="Calibri, Calibri_MSFontService, sans-serif"
                x="145.89746"
                y="64.55957"
                id="text15">$</text>
@@ -221,6 +223,7 @@
                stroke-width="3px"
                id="rect19" />
             <text
+               font-family="Calibri, Calibri_MSFontService, sans-serif"
                x="198.18945"
                y="64.005859"
                id="text19">type</text>
@@ -268,6 +271,7 @@
                stroke-width="3px"
                id="rect23" />
             <text
+               font-family="Calibri, Calibri_MSFontService, sans-serif"
                x="269.52246"
                y="64.272461"
                id="text23">:</text>
@@ -315,6 +319,7 @@
                stroke-width="3px"
                id="rect27" />
             <text
+               font-family="Calibri, Calibri_MSFontService, sans-serif"
                x="323.14258"
                y="65.467773"
                id="text27">value</text>
@@ -340,6 +345,7 @@
              xlink:href="#segment"
              id="a29">
             <text
+               font-family="Calibri, Calibri_MSFontService, sans-serif"
                x="89.5"
                y="36"
                class="comment"
@@ -390,6 +396,7 @@
            stroke-width="3px"
            id="rect33" />
         <text
+           font-family="Calibri, Calibri_MSFontService, sans-serif"
            x="214.58984"
            y="102.82031"
            id="text33">+</text>
