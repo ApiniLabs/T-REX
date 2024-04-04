@@ -2,7 +2,7 @@
 
 ## `T-REX` in a Nutshell
 
-`T-REX` (**T**rivial **R**ecord **Ex**change) is a simple text-based serialization format. It facilitates ad-hoc transfer of low-dimensional result data. It eliminates the need for manual transcription from laboratory devices to software programs.
+`T-REX` (**T**rivial **R**ecord **Ex**change) is a simple text-based serialization format. It is purpose-built for replacing manual transcription scenarios with easy to implement ad-hoc data transmissions.
 
 Here is an example tare weight (250 mg) and an environmental temperature (293.15 K), formatted using `T-REX`:
 
@@ -10,11 +10,18 @@ Here is an example tare weight (250 mg) and an environmental temperature (293.15
 TARE$MGM:2.5E2+ENV$KEL:293.15
 ```
 
-`T-REX`-formatted data can also be added as an extension to a [`PAC-ID`](https://github.com/ApiniLabs/PAC-ID), like this. `PAC-ID` and `T-REX`-data is separated by an `*`:
+`T-REX`-formatted data is typically embedded into a URL by using the extension space of a [`PAC-ID`](https://github.com/ApiniLabs/PAC-ID):
 
 ```
-HTTPS://PAC.METTORIUS.COM/DEVICE/21:210263*11$T.D:20231121+METHOD$T.A:BASIC
+HTTPS://PAC.METTORIUS.COM/DEVICE/21:210263/RNR:23*11$T.D:20231121+METHOD$T.A:BASIC
 ```
+
+This combination results in a globally uniqe identifier referencing the full data record (`PAC-ID`) while also providing directly accessible summarized result data (`T-REX`). Any form of transmission suitable for an URL can be used - in its simplest case this is a QR code.
+
+
+Other smart building blocks like [PAC-ID Resolver](https://github.com/ApiniLabs/pac-id-resolver) extend the capabilities even further.
+
+
 
 ## Introduction
 
@@ -26,20 +33,20 @@ Developed from earlier ideas like LabQR and ResultQR by the SiLA 2 Core Working 
 
 ## Specification
 
-`T-REX`-formatted data consists of a string of ASCII characters, which is made up of individual `segment`s. These `segment`s are separated by `+`. Each `segment` comprises a `key` and a `typedvalue`, distinguished by a colon (`$`).
+`T-REX`-formatted data consists of a sequence of ASCII characters, which is made up of individual `segment`s. These `segment`s are separated by `+`.
 
-The following railroad diagram illustrates this:
+Each `segment` comprises of a `key`, a `type` and a `value`. `key` and `type` are separated by a `$` colon, while `:` is used as a separator betweren `type` and `value`.
+
+The following diagram shows the main structure of a `T-REX`:
 
 ![T-REX Railroad Diagram](images/t-rex-railroad-diagram-simple.svg)
 <!-- Created with https://matthijsgroen.github.io/ebnf2railroad/try-yourself.html, downloaded with Chrome Extension https://svgexport.io/, and beautified with https://inkscape.org/ -->
 
-*A railroad diagram, showing a simplified EBNF grammar of the T-REX format (valbinary and other production rules and terminals have been left out for simplicity).*
+*A railroad diagram depicting the main structure of a `T-REX`.*
 
-The railroad diagram above shows a simplified EBNF grammar of the T-REX format. The full grammar can be found further down.
+Further information about each component of the the main structure a `T-REX` can be found in the subsequent chapters.
 
-The following sections provide more details on the `T-REX` format.
-
-### Example `key`s
+### `Key`s
 
 Some example `key`s are listed in the table below. The best practice is to use a (well-known) English word or abbreviation. The `key` MAY also be a numeric code based on a [GS1 Application Identifier](https://ref.gs1.org/ai/). The table lists two example GS1 AIs, however, there are many more available.
 
@@ -52,10 +59,9 @@ Some example `key`s are listed in the table below. The best practice is to use a
 | `MODE` | T-REX (this specification) | Mode of operation |
 | ... | | |
 | `17` | [GS1 AI](https://ref.gs1.org/ai/) | Expiration date |
-| `21` | [GS1 AI](https://ref.gs1.org/ai/) | Serial number |
 | ... | | |
 
-### Valid types (units)
+### Types (Units) and Values
 
 The type MUST either be a `Unit of Measure Common Code` or a hint to a data type as outlined in the table below. Note, the table only contains some common examples of units from the `Unit of Measure Common Code`; there are many more defined in the complete list[^1].
 
@@ -104,26 +110,23 @@ The following section contains the grammar for the T-REX format in [EBNF](https:
 trex         = segment , { "+" , segment };
 segment      = key, "$", typedvalue ;
 key          = alphanumeric, {punctuation | alphanumeric} ;
-typedvalue   = (numericunit, vtseparator, numericvalue) 
-| (texttype, vtseparator, textvalue)
-| (booltype, vtseparator, boolvalue)
-(* date and time are in ISO8601 Basic Format *)
-| (datetype, vtseparator, datevalue) 
-(* should only be used if no combination of segments of other types can adequately represent your data *)
-| (binarytype, vtseparator, binaryvalue)
-(* reserved for error handling, e.g. error codes in case the actual value of the segment is unavailable *)
-| (error, vtseparator, errorvalue) ;
+typedvalue   = (numericunit, tvseparator, numericvalue) 
+| (texttype, tvseparator, textvalue)
+| (booltype, tvseparator, boolvalue)
+| (datetype, tvseparator, datevalue) 
+| (binarytype, tvseparator, binaryvalue) (* Should only be used if no combination of segments of other types can adequately represent your data. *)
+| (error, tvseparator, errorvalue) (* Reserved for error handling, e.g. error codes in case the actual value of the segment is unavailable. *);
 
-numericunit  = alphanumeric, alphanumeric, [alphanumeric];
+numericunit  = alphanumeric, alphanumeric, [alphanumeric]; (* Unit of Measure Common Code as defined by UN/CEFACT in REC 20 *)
 numericvalue = decimal | scientific ;
 texttype     = "T.A";
 textvalue    = punctuation | alphanumeric ;
 booltype     = "T.B";
 boolvalue    = "T" | "F" ;
 datetype     = "T.D";
-datevalue    = (date, [time]) | time ;
+datevalue    = (date, [time]) | time ; (* Date and time are in ISO8601 Basic Format [1]. *)
 binarytype   = "T.X";
-binaryvalue  = base36 ;
+binaryvalue  = base36 ; (* Binary data is encoded with Base36. *)
 error        = "E" ;
 errorvalue   = punctuation | alphanumeric ;
 
@@ -143,7 +146,7 @@ minutes      = digit, digit ;
 seconds      = digit, digit ;
 milliseconds = digit, digit, digit ;
 
-vsepchar     = ":" ;
+tvseparator  = ":" ;
 punctuation  = "." | "-" ;
 alphanumeric = letter | digit ;
 letter       = "A" | "B" | "C" | "D" | "E" | "F" | "G"
@@ -153,9 +156,9 @@ letter       = "A" | "B" | "C" | "D" | "E" | "F" | "G"
 digit        = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
 ```
 
-## Formatting `T-REX` as QR Code / `T-REX`as `PAC-ID` Extension
+## `T-REX` as URL and QR Code
 
-`T-REX`-formatted data can be added to a `PAC-ID`s after a `*` character. Like this, `T-REX`-formatted data can easily be represented as a QR code.
+`T-REX`-formatted data can be added into the extension space of a `PAC-ID`. This results in a URL optimized for QR-Codes.
 
 Example:
 
