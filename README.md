@@ -5,11 +5,13 @@
 `T-REX` (**T**rivial **R**ecord **Ex**change) is a simple text-based serialization format. It facilitates ad-hoc transfer of low-dimensional result data. It eliminates the need for manual transcription from laboratory devices to software programs.
 
 Here is an example tare weight (250 mg) and an environmental temperature (293.15 K), formatted using `T-REX`:
+
 ```
 TARE$MGM:2.5E2+ENV$KEL:293.15
 ```
 
 `T-REX`-formatted data can also be added as an extension to a [`PAC-ID`](https://github.com/ApiniLabs/PAC-ID), like this. `PAC-ID` and `T-REX`-data is separated by an `*`:
+
 ```
 HTTPS://PAC.METTORIUS.COM/DEVICE/21:210263*11$T.D:20231121+METHOD$T.A:BASIC
 ```
@@ -49,7 +51,7 @@ Some example `key`s are listed in the table below. The best practice is to use a
 | `DURATION` | T-REX (this specification) | Duration |
 | `MODE` | T-REX (this specification) | Mode of operation |
 | ... | | |
-| `10` | [GS1 AI](https://ref.gs1.org/ai/) | Batch or lot number |
+| `17` | [GS1 AI](https://ref.gs1.org/ai/) | Expiration date |
 | `21` | [GS1 AI](https://ref.gs1.org/ai/) | Serial number |
 | ... | | |
 
@@ -58,14 +60,14 @@ Some example `key`s are listed in the table below. The best practice is to use a
 The type MUST either be a `Unit of Measure Common Code` or a hint to a data type as outlined in the table below. Note, the table only contains some common examples of units from the `Unit of Measure Common Code`; there are many more defined in the complete list[^1].
 
 | type (unit) | Ontology Origin | Description |
-| :-- | :-- | :-- | 
+| :-- | :-- | :-- |
 | `MGM`  | Unit of Measure Common Code[^1] | For milligram [10⁻⁶ kg] |
 | `CEL`  | Unit of Measure Common Code[^1] | For degree celsius, Refer ISO 80000-5 (Quantities and units — Part 5: Thermodynamics) |
 | `MLT`  | Unit of Measure Common Code[^1] | For millilitre, [10⁻⁶ m³] |
 | `GL`  | Unit of Measure Common Code[^1] | For gram per litre [g/l] or [kg/m³] |
 | `C34`  | Unit of Measure Common Code[^1] | For mole [mol] |
 | `D43`  | Unit of Measure Common Code[^1] | For atomic mass unit [u] or [1,660 538 782 x 10⁻²⁷ kg] |
-| `C62`  | Unit of Measure Common Code[^1] | For unit-less numbers, use `C62` (unit “one“). |
+| `C62`  | Unit of Measure Common Code[^1] | For unit-less numbers (unit “one“). |
 | ... |  | ... |
 | ... |  | ... many more units are defined in Unit of Measure Common Code[^1] ... |
 | ... |  | ... |
@@ -76,16 +78,18 @@ The type MUST either be a `Unit of Measure Common Code` or a hint to a data type
 | `E` | T-REX (this specification) | For error codes (alphanumeric strings of a variable length, limited to the character set `A-Z`, `0-9`, `.` and `-`). This type is meant to be used to indicate errors for expected `key`s, e.g. if a `TEMP$KEL` is not available because the corresponding sensor was unplugged, `TEMP$T.E:NC` could be used. |
 | `X.` | T-REX (this specification) | `X.`-prefixed codes are reserved for future extensions. |
 
-[^1]: Unit of Measure Common Code as defined by UN/CEFACT in REC 20 ([https://unece.org/trade/uncefact/cl-recommendations](https://unece.org/trade/uncefact/cl-recommendations) > REC20 > Latest Revision > Column “CommonCode“ of Annexes I-III Excel File) 
+[^1]: Unit of Measure Common Code as defined by UN/CEFACT in REC 20 ([https://unece.org/trade/uncefact/cl-recommendations](https://unece.org/trade/uncefact/cl-recommendations) > REC20 > Latest Revision > Column “CommonCode“ of Annexes I-III Excel File)
 
 ## Examples
 
 Example `T-REX`, containing a tare weight (250 mg) and an environmental temperature (293.15 K):
+
 ```
 TARE$MGM:2.5E2+ENV$KEL:293.15
 ```
 
 Example `T-REX`, containing a start date (22 FEB 2024 17:48), a duration (0 min) and a mode ("MANUAL"):
+
 ```
 START$T.D:20240222T1748+DURATION$MIN:0+MODE$T.A:MANUAL
 ```
@@ -96,32 +100,50 @@ The following section contains the grammar for the T-REX format in [EBNF](https:
 
 [^2]: Whether a text is a valid `T-REX` can easily be tested using the [EBNF Evaluator](https://mdkrajnak.github.io/ebnftest/)
 
-```
+``` ebnf
 trex         = segment , { "+" , segment };
 segment      = key, "$", typedvalue ;
-key          = alphanumeric, {safechar} ;
-typedvalue   = valnumeric | valalphanum | valbool | valdatetime | valbinary | valerror ;
+key          = alphanumeric, {punctuation | alphanumeric} ;
+typedvalue   = (numericunit, vtseparator, numericvalue) 
+| (texttype, vtseparator, textvalue)
+| (booltype, vtseparator, boolvalue)
+(* date and time are in ISO8601 Basic Format *)
+| (datetype, vtseparator, datevalue) 
+(* should only be used if no combination of segments of other types can adequately represent your data *)
+| (binarytype, vtseparator, binaryvalue)
+(* reserved for error handling, e.g. error codes in case the actual value of the segment is unavailable *)
+| (error, vtseparator, errorvalue) ;
 
-(* alphanumeric digits of valnumeric are Unit of Measure Common Codes[1] *)
-valnumeric   = alphanumeric, alphanumeric, [alphanumeric], vsepchar, number ;
-valalphanum  = "T.A", vsepchar, {safechar} ;
-valbool      = "T.B", vsepchar, bool ;
-(* date and time of valdatetime are in ISO8601 Basic Format *)
-valdatetime  = "T.D", vsepchar, ( (date, [time]) | time ) ;
-(* valbinary should only be used if no combination of segments of other types can adequately represent your data *)
-valbinary    = "T.X", vsepchar, base36 ;
-(* valerror is reserved for error handling, e.g. error codes in case the actual value of the segment is unavailable *)
-valerror     = "E", vsepchar, {safechar} ;
+numericunit  = alphanumeric, alphanumeric, [alphanumeric];
+numericvalue = decimal | scientific ;
+texttype     = "T.A";
+textvalue    = punctuation | alphanumeric ;
+booltype     = "T.B";
+boolvalue    = "T" | "F" ;
+datetype     = "T.D";
+datevalue    = (date, [time]) | time ;
+binarytype   = "T.X";
+binaryvalue  = base36 ;
+error        = "E" ;
+errorvalue   = punctuation | alphanumeric ;
 
-number       = decimal | scientific ;
+
 decimal      = integer | ( ["-"] , {digit} , "." , digit , {digit} ) ;
 scientific   = decimal , "E" , integer ;
 integer      = ["-"] , digit, {digit} ;
-bool         = "T" | "F" ;
 base36       = alphanumeric ;
+date         = year, month, day ;
+time         = "T", hours , minutes, [seconds, [ ".",  milliseconds]] ;
+
+year         = digit, digit, digit, digit ;
+month        = digit, digit ;
+day          = digit, digit ;
+hours        = digit, digit ;
+minutes      = digit, digit ;
+seconds      = digit, digit ;
+milliseconds = digit, digit, digit ;
 
 vsepchar     = ":" ;
-safechar     = punctuation | alphanumeric ;
 punctuation  = "." | "-" ;
 alphanumeric = letter | digit ;
 letter       = "A" | "B" | "C" | "D" | "E" | "F" | "G"
@@ -129,23 +151,14 @@ letter       = "A" | "B" | "C" | "D" | "E" | "F" | "G"
               | "O" | "P" | "Q" | "R" | "S" | "T" | "U"
               | "V" | "W" | "X" | "Y" | "Z" ;
 digit        = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
-
-date         = year, month, day ;
-year         = digit, digit, digit, digit ;
-month        = digit, digit ;
-day          = digit, digit ;
-time         = "T", hours , minutes, [seconds, [ ".",  milliseconds]] ;
-hours        = digit, digit ;
-minutes      = digit, digit ;
-seconds      = digit, digit ;
-milliseconds = digit, digit, digit ;
 ```
 
 ## Formatting `T-REX` as QR Code / `T-REX`as `PAC-ID` Extension
 
-`T-REX`-formatted data can be added to a `PAC-ID`s after a `*` character. Like this, `T-REX`-formatted data can easily be represented as a QR code. 
+`T-REX`-formatted data can be added to a `PAC-ID`s after a `*` character. Like this, `T-REX`-formatted data can easily be represented as a QR code.
 
 Example:
+
 ```
 HTTPS://PAC.METTORIUS.COM/DEVICE/21:210263*11$T.D:20231121+METHOD$T.A:BASIC
 ```
