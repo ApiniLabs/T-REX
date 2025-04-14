@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="railroad-diagram"
+   width="761"
+   style="max-height: 312px; background-color:white"
+   font-family="Arial, Helvetica, sans-serif"
+   viewBox="0 0 761 312"
+   height="312"
+   version="1.1"
+   id="svg113"
+   sodipodi:docname="trex-railroad-diagram-with-table.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs113" />
+  <sodipodi:namedview
+     id="namedview113"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.8186597"
+     inkscape:cx="247.16004"
+     inkscape:cy="253.7583"
+     inkscape:window-width="2361"
+     inkscape:window-height="1017"
+     inkscape:window-x="1923"
+     inkscape:window-y="14"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g94" />
+  <g
+     transform="translate(.5 .5)"
+     id="g113">
+    <g
+       id="g1">
+      <path
+         d="M20 81v20m0 -10h20"
+         stroke="#000000"
+         fill-opacity="0"
+         fill="#000000"
+         stroke-width="3px"
+         id="path1" />
+    </g>
+    <path
+       d="M40 91h10"
+       stroke="#000000"
+       fill-opacity="0"
+       fill="#000000"
+       stroke-width="3px"
+       id="path2" />
+    <g
+       id="g111">
+      <path
+         d="M50 91h0"
+         stroke="#000000"
+         fill-opacity="0"
+         fill="#000000"
+         stroke-width="3px"
+         id="path3" />
+      <path
+         d="M711 91h0"
+         stroke="#000000"
+         fill-opacity="0"
+         fill="#000000"
+         stroke-width="3px"
+         id="path4" />
+      <path
+         d="M50 91h10"
+         stroke="#000000"
+         fill-opacity="0"
+         fill="#000000"
+         stroke-width="3px"
+         id="path5" />
+      <g
+         id="g107">
+        <path
+           d="M60 91h0"
+           stroke="#000000"
+           fill-opacity="0"
+           fill="#000000"
+           stroke-width="3px"
+           id="path6" />
+        <path
+           d="M701 91h0"
+           stroke="#000000"
+           fill-opacity="0"
+           fill="#000000"
+           stroke-width="3px"
+           id="path7" />
+        <rect
+           x="60"
+           y="42"
+           width="641"
+           height="220"
+           rx="10"
+           ry="10"
+           class="group-box"
+           stroke="#808080"
+           fill="none"
+           stroke-width="3px"
+           id="rect7"
+           style="stroke-dasharray:4,2;stroke-dashoffset:0;stroke-width:2" />
+        <g
+           id="g105">
+          <path
+             d="M60 91h0"
+             stroke="#000000"
+             fill-opacity="0"
+             fill="#000000"
+             stroke-width="3px"
+             id="path8" />
+          <path
+             d="M701 91h0"
+             stroke="#000000"
+             fill-opacity="0"
+             fill="#000000"
+             stroke-width="3px"
+             id="path9" />
+          <path
+             d="M60 91h20"
+             stroke="#000000"
+             fill-opacity="0"
+             fill="#000000"
+             stroke-width="3px"
+             id="path10" />
+          <g
+             id="g35">
+            <path
+               d="M80 91h141"
+               stroke="#000000"
+               fill-opacity="0"
+               fill="#000000"
+               stroke-width="3px"
+               id="path11" />
+            <path
+               d="M540 91h141"
+               stroke="#000000"
+               fill-opacity="0"
+               fill="#000000"
+               stroke-width="3px"
+               id="path12" />
+            <rect
+               x="221"
+               y="72"
+               width="319"
+               height="38"
+               rx="10"
+               ry="10"
+               class="group-box"
+               stroke="#808080"
+               fill="none"
+               stroke-width="3px"
+               id="rect12"
+               style="stroke-dasharray:4,2;stroke-dashoffset:0;stroke-width:2" />
+            <g
+               id="g33">
+              <path
+                 d="M221 91h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path13" />
+              <path
+                 d="M530 91h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path14" />
+              <g
+                 class="non-terminal"
+                 id="g16">
+                <path
+                   d="M231 91h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path15" />
+                <path
+                   d="M276.5 91h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path16" />
+                <rect
+                   x="231"
+                   y="80"
+                   width="45.5"
+                   height="22"
+                   stroke="#000000"
+                   fill="#FEFFDF"
+                   stroke-width="3px"
+                   id="rect16" />
+                <a
+                   xlink:href="#key"
+                   id="a16"
+                   transform="translate(-12)">
+                  <text
+                     x="253.75"
+                     y="95"
+                     id="text16">key</text>
+                </a>
+              </g>
+              <path
+                 d="M276.5 91h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path17" />
+              <path
+                 d="M286.5 91h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path18" />
+              <g
+                 class="terminal"
+                 id="g20">
+                <path
+                   d="M296.5 91h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path19" />
+                <path
+                   d="M325 91h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path20" />
+                <rect
+                   x="296.5"
+                   y="80"
+                   width="28.5"
+                   height="22"
+                   rx="10"
+                   ry="10"
+                   stroke="#000000"
+                   fill="#FEFFDF"
+                   stroke-width="3px"
+                   id="rect20" />
+                <text
+                   x="306.75"
+                   y="95"
+                   id="text20">$</text>
+              </g>
+              <path
+                 d="M325 91h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path21" />
+              <path
+                 d="M335 91h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path22" />
+              <g
+                 class="non-terminal"
+                 id="g24">
+                <path
+                   d="M345 91h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path23" />
+                <path
+                   d="M399 91h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path24" />
+                <rect
+                   x="345"
+                   y="80"
+                   width="54"
+                   height="22"
+                   stroke="#000000"
+                   fill="#FEFFDF"
+                   stroke-width="3px"
+                   id="rect24" />
+                <a
+                   xlink:href="#type"
+                   id="a24"
+                   transform="translate(-14)">
+                  <text
+                     x="372"
+                     y="95"
+                     id="text24">type</text>
+                </a>
+              </g>
+              <path
+                 d="M399 91h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path25" />
+              <path
+                 d="M409 91h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path26" />
+              <g
+                 class="terminal"
+                 id="g28">
+                <path
+                   d="M419 91h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path27" />
+                <path
+                   d="M447.5 91h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path28" />
+                <rect
+                   x="419"
+                   y="80"
+                   width="28.5"
+                   height="22"
+                   rx="10"
+                   ry="10"
+                   stroke="#000000"
+                   fill="#FEFFDF"
+                   stroke-width="3px"
+                   id="rect28" />
+                <text
+                   x="429.25"
+                   y="95"
+                   id="text28">:</text>
+              </g>
+              <path
+                 d="M447.5 91h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path29" />
+              <path
+                 d="M457.5 91h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path30" />
+              <g
+                 class="non-terminal"
+                 id="g32">
+                <path
+                   d="M467.5 91h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path31" />
+                <path
+                   d="M530 91h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path32" />
+                <rect
+                   x="467.5"
+                   y="80"
+                   width="62.5"
+                   height="22"
+                   stroke="#000000"
+                   fill="#FEFFDF"
+                   stroke-width="3px"
+                   id="rect32" />
+                <a
+                   xlink:href="#value"
+                   id="a32"
+                   transform="translate(-16)">
+                  <text
+                     x="498.75"
+                     y="95"
+                     id="text32">value</text>
+                </a>
+              </g>
+            </g>
+            <g
+               id="g34">
+              <path
+                 d="M221 61h0"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path33" />
+              <path
+                 d="M322 61h0"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path34" />
+              <a
+                 xlink:href="#value segment"
+                 id="a34">
+                <text
+                   x="229.5"
+                   y="66"
+                   class="comment"
+                   id="text34">value segment</text>
+              </a>
+            </g>
+          </g>
+          <path
+             d="M681 91h20"
+             stroke="#000000"
+             fill-opacity="0"
+             fill="#000000"
+             stroke-width="3px"
+             id="path35" />
+          <path
+             d="M60 91a10 10 0 0 1 10 10v78a10 10 0 0 0 10 10"
+             stroke="#000000"
+             fill-opacity="0"
+             fill="#000000"
+             stroke-width="3px"
+             id="path36" />
+          <g
+             id="g104">
+            <path
+               d="M80 189h0"
+               stroke="#000000"
+               fill-opacity="0"
+               fill="#000000"
+               stroke-width="3px"
+               id="path37" />
+            <path
+               d="M681 189h0"
+               stroke="#000000"
+               fill-opacity="0"
+               fill="#000000"
+               stroke-width="3px"
+               id="path38" />
+            <rect
+               x="80"
+               y="140"
+               width="601"
+               height="114"
+               rx="10"
+               ry="10"
+               class="group-box"
+               stroke="#808080"
+               fill="none"
+               stroke-width="3px"
+               id="rect38"
+               style="stroke-width:2;stroke-dasharray:4,2;stroke-dashoffset:0" />
+            <g
+               id="g102">
+              <path
+                 d="M80 189h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path39" />
+              <path
+                 d="M671 189h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path40" />
+              <g
+                 class="non-terminal"
+                 id="g42">
+                <path
+                   d="M90 189h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path41" />
+                <path
+                   d="M186.5 189h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path42" />
+                <rect
+                   x="90"
+                   y="178"
+                   width="96.5"
+                   height="22"
+                   stroke="#000000"
+                   fill="#FEFFDF"
+                   stroke-width="3px"
+                   id="rect42" />
+                <a
+                   xlink:href="#table key"
+                   id="a42"
+                   inkscape:label="a42"
+                   transform="translate(-4)">
+                  <text
+                     x="110.25"
+                     y="193"
+                     id="text42">table key</text>
+                </a>
+              </g>
+              <path
+                 d="M186.5 189h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path43" />
+              <path
+                 d="M196.5 189h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path44" />
+              <g
+                 class="terminal"
+                 id="g46">
+                <path
+                   d="M206.5 189h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path45" />
+                <path
+                   d="M243.5 189h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path46" />
+                <rect
+                   x="206.5"
+                   y="178"
+                   width="37"
+                   height="22"
+                   rx="10"
+                   ry="10"
+                   stroke="#000000"
+                   fill="#FEFFDF"
+                   stroke-width="3px"
+                   id="rect46" />
+                <text
+                   x="219"
+                   y="193"
+                   id="text46">$$</text>
+              </g>
+              <path
+                 d="M243.5 189h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path47" />
+              <path
+                 d="M253.5 189h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path48" />
+              <g
+                 id="g72">
+                <path
+                   d="M263.5 189h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path49" />
+                <path
+                   d="M471.5 189h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path50" />
+                <rect
+                   x="263.68298"
+                   y="170.18275"
+                   width="207.63403"
+                   height="65.878525"
+                   rx="9.9824057"
+                   ry="14.016708"
+                   class="group-box"
+                   stroke="#808080"
+                   fill="none"
+                   stroke-width="3px"
+                   id="rect50"
+                   style="stroke-width:2.36576;stroke-dasharray:4.73152, 2.36576;stroke-dashoffset:0" />
+                <g
+                   id="g69">
+                  <path
+                     d="M263.5 189h10"
+                     stroke="#000000"
+                     fill-opacity="0"
+                     fill="#000000"
+                     stroke-width="3px"
+                     id="path51" />
+                  <path
+                     d="M461.5 189h10"
+                     stroke="#000000"
+                     fill-opacity="0"
+                     fill="#000000"
+                     stroke-width="3px"
+                     id="path52" />
+                  <path
+                     d="M273.5 189h10"
+                     stroke="#000000"
+                     fill-opacity="0"
+                     fill="#000000"
+                     stroke-width="3px"
+                     id="path53" />
+                  <g
+                     id="g66">
+                    <path
+                       d="M283.5 189h0"
+                       stroke="#000000"
+                       fill-opacity="0"
+                       fill="#000000"
+                       stroke-width="3px"
+                       id="path54" />
+                    <path
+                       d="M451.5 189h0"
+                       stroke="#000000"
+                       fill-opacity="0"
+                       fill="#000000"
+                       stroke-width="3px"
+                       id="path55" />
+                    <g
+                       class="non-terminal"
+                       id="g57">
+                      <path
+                         d="M283.5 189h0"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path56" />
+                      <path
+                         d="M329 189h0"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path57" />
+                      <rect
+                         x="283.5"
+                         y="178"
+                         width="45.5"
+                         height="22"
+                         stroke="#000000"
+                         fill="#FEFFDF"
+                         stroke-width="3px"
+                         id="rect57" />
+                      <a
+                         xlink:href="#key"
+                         id="a57"
+                         transform="translate(-10)">
+                        <text
+                           x="306.25"
+                           y="193"
+                           id="text57">key</text>
+                      </a>
+                    </g>
+                    <path
+                       d="M329 189h10"
+                       stroke="#000000"
+                       fill-opacity="0"
+                       fill="#000000"
+                       stroke-width="3px"
+                       id="path58" />
+                    <path
+                       d="M339 189h10"
+                       stroke="#000000"
+                       fill-opacity="0"
+                       fill="#000000"
+                       stroke-width="3px"
+                       id="path59" />
+                    <g
+                       class="terminal"
+                       id="g61">
+                      <path
+                         d="M349 189h0"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path60" />
+                      <path
+                         d="M377.5 189h0"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path61" />
+                      <rect
+                         x="349"
+                         y="178"
+                         width="28.5"
+                         height="22"
+                         rx="10"
+                         ry="10"
+                         stroke="#000000"
+                         fill="#FEFFDF"
+                         stroke-width="3px"
+                         id="rect61" />
+                      <text
+                         x="359.25"
+                         y="193"
+                         id="text61">$</text>
+                    </g>
+                    <path
+                       d="M377.5 189h10"
+                       stroke="#000000"
+                       fill-opacity="0"
+                       fill="#000000"
+                       stroke-width="3px"
+                       id="path62" />
+                    <path
+                       d="M387.5 189h10"
+                       stroke="#000000"
+                       fill-opacity="0"
+                       fill="#000000"
+                       stroke-width="3px"
+                       id="path63" />
+                    <g
+                       class="non-terminal"
+                       id="g65">
+                      <path
+                         d="M397.5 189h0"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path64" />
+                      <path
+                         d="M451.5 189h0"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path65" />
+                      <rect
+                         x="397.5"
+                         y="178"
+                         width="54"
+                         height="22"
+                         stroke="#000000"
+                         fill="#FEFFDF"
+                         stroke-width="3px"
+                         id="rect65" />
+                      <a
+                         xlink:href="#type"
+                         id="a65"
+                         transform="translate(-14)">
+                        <text
+                           x="424.5"
+                           y="193"
+                           id="text65">type</text>
+                      </a>
+                    </g>
+                  </g>
+                  <path
+                     d="M451.5 189h10"
+                     stroke="#000000"
+                     fill-opacity="0"
+                     fill="#000000"
+                     stroke-width="3px"
+                     id="path66" />
+                </g>
+                <g
+                   id="g71">
+                  <path
+                     d="M263.5 159h0"
+                     stroke="#000000"
+                     fill-opacity="0"
+                     fill="#000000"
+                     stroke-width="3px"
+                     id="path70" />
+                  <path
+                     d="M357.5 159h0"
+                     stroke="#000000"
+                     fill-opacity="0"
+                     fill="#000000"
+                     stroke-width="3px"
+                     id="path71" />
+                  <a
+                     xlink:href="#table header"
+                     id="a71"
+                     transform="translate(8)">
+                    <text
+                       x="262.5"
+                       y="164"
+                       class="comment"
+                       id="text71">table header</text>
+                  </a>
+                </g>
+              </g>
+              <path
+                 d="M471.5 189h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path72" />
+              <path
+                 d="M481.5 189h10"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path73" />
+              <g
+                 id="g101">
+                <path
+                   d="M491.5 189h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path74" />
+                <path
+                   d="M671 189h0"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path75" />
+                <path
+                   d="M491.5 189h10"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path76" />
+                <g
+                   id="g98">
+                  <path
+                     d="M501.5 189h0"
+                     stroke="#000000"
+                     fill-opacity="0"
+                     fill="#000000"
+                     stroke-width="3px"
+                     id="path77" />
+                  <path
+                     d="M661 189h0"
+                     stroke="#000000"
+                     fill-opacity="0"
+                     fill="#000000"
+                     stroke-width="3px"
+                     id="path78" />
+                  <g
+                     class="terminal"
+                     id="g80">
+                    <path
+                       d="M501.5 189h0"
+                       stroke="#000000"
+                       fill-opacity="0"
+                       fill="#000000"
+                       stroke-width="3px"
+                       id="path79" />
+                    <path
+                       d="M538.5 189h0"
+                       stroke="#000000"
+                       fill-opacity="0"
+                       fill="#000000"
+                       stroke-width="3px"
+                       id="path80" />
+                    <rect
+                       x="501.5"
+                       y="178"
+                       width="37"
+                       height="22"
+                       rx="10"
+                       ry="10"
+                       stroke="#000000"
+                       fill="#FEFFDF"
+                       stroke-width="3px"
+                       id="rect80" />
+                    <text
+                       x="514"
+                       y="193"
+                       id="text80">::</text>
+                  </g>
+                  <path
+                     d="M538.5 189h10"
+                     stroke="#000000"
+                     fill-opacity="0"
+                     fill="#000000"
+                     stroke-width="3px"
+                     id="path81" />
+                  <path
+                     d="M548.5 189h10"
+                     stroke="#000000"
+                     fill-opacity="0"
+                     fill="#000000"
+                     stroke-width="3px"
+                     id="path82" />
+                  <g
+                     id="g97">
+                    <path
+                       d="M558.5 189h0"
+                       stroke="#000000"
+                       fill-opacity="0"
+                       fill="#000000"
+                       stroke-width="3px"
+                       id="path83" />
+                    <path
+                       d="M661 189h0"
+                       stroke="#000000"
+                       fill-opacity="0"
+                       fill="#000000"
+                       stroke-width="3px"
+                       id="path84" />
+                    <rect
+                       x="558.5"
+                       y="170"
+                       width="102.5"
+                       height="68"
+                       rx="10"
+                       ry="10"
+                       class="group-box"
+                       stroke="#808080"
+                       fill="none"
+                       stroke-width="3px"
+                       id="rect84"
+                       style="stroke-width:2;stroke-dasharray:4,2;stroke-dashoffset:0" />
+                    <g
+                       id="g94">
+                      <path
+                         d="M558.5 189h10"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path85" />
+                      <path
+                         d="M651 189h10"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path86" />
+                      <path
+                         d="M568.5 189h10"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path87" />
+                      <g
+                         class="non-terminal"
+                         id="g89">
+                        <path
+                           d="M578.5 189h0"
+                           stroke="#000000"
+                           fill-opacity="0"
+                           fill="#000000"
+                           stroke-width="3px"
+                           id="path88" />
+                        <path
+                           d="M641 189h0"
+                           stroke="#000000"
+                           fill-opacity="0"
+                           fill="#000000"
+                           stroke-width="3px"
+                           id="path89" />
+                        <rect
+                           x="578.5"
+                           y="178"
+                           width="62.5"
+                           height="22"
+                           stroke="#000000"
+                           fill="#FEFFDF"
+                           stroke-width="3px"
+                           id="rect89" />
+                        <a
+                           xlink:href="#value"
+                           id="a89"
+                           transform="translate(-16)">
+                          <text
+                             x="609.75"
+                             y="193"
+                             id="text89">value</text>
+                        </a>
+                      </g>
+                      <path
+                         d="M641 189h10"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path90" />
+                      <path
+                         d="M578.5 189a10 10 0 0 0 -10 10v10a10 10 0 0 0 10 10"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path91" />
+                      <g
+                         class="terminal"
+                         id="g93">
+                        <path
+                           d="M578.5 219h17"
+                           stroke="#000000"
+                           fill-opacity="0"
+                           fill="#000000"
+                           stroke-width="3px"
+                           id="path92" />
+                        <path
+                           d="M624 219h17"
+                           stroke="#000000"
+                           fill-opacity="0"
+                           fill="#000000"
+                           stroke-width="3px"
+                           id="path93" />
+                        <rect
+                           x="595.5"
+                           y="208"
+                           width="28.5"
+                           height="22"
+                           rx="10"
+                           ry="10"
+                           stroke="#000000"
+                           fill="#FEFFDF"
+                           stroke-width="3px"
+                           id="rect93" />
+                        <text
+                           x="607.75"
+                           y="223"
+                           id="text93">:</text>
+                      </g>
+                      <path
+                         d="M641 219a10 10 0 0 0 10 -10v-10a10 10 0 0 0 -10 -10"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path94" />
+                      <path
+                         d="m 277.042,189.10296 a 10.03141,9.6944136 0 0 0 -10.0314,9.69441 v 9.69441 a 10.03141,9.6944136 0 0 0 10.0314,9.69441"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="2.95845px"
+                         id="path91-5" />
+                      <g
+                         class="terminal"
+                         id="g93-7"
+                         transform="matrix(1.0076149,0,0,0.99998401,-252.83236,-0.89389712)">
+                        <path
+                           d="M 524.65029,219 H 595.5"
+                           stroke="#000000"
+                           fill-opacity="0"
+                           fill="#000000"
+                           stroke-width="3px"
+                           id="path92-5"
+                           sodipodi:nodetypes="cc" />
+                        <path
+                           d="m 624,219 79.40345,-0.1944"
+                           stroke="#000000"
+                           fill-opacity="0"
+                           fill="#000000"
+                           stroke-width="3px"
+                           id="path93-2"
+                           sodipodi:nodetypes="cc" />
+                        <rect
+                           x="595.5"
+                           y="208"
+                           width="28.5"
+                           height="22"
+                           rx="10"
+                           ry="10"
+                           stroke="#000000"
+                           fill="#feffdf"
+                           stroke-width="3px"
+                           id="rect93-2" />
+                        <text
+                           x="607.75"
+                           y="223"
+                           id="text93-0">:</text>
+                      </g>
+                      <path
+                         d="m 455.49858,217.75328 a 10.043975,9.5727206 0 0 0 10.04398,-9.57271 v -9.57272 a 10.043975,9.5727206 0 0 0 -10.04398,-9.57273"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="2.94165px"
+                         id="path94-4" />
+                    </g>
+                    <g
+                       id="g96"
+                       transform="translate(8)">
+                      <path
+                         d="m 558.5,159 v 0"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path95" />
+                      <path
+                         d="m 631.5,159 v 0"
+                         stroke="#000000"
+                         fill-opacity="0"
+                         fill="#000000"
+                         stroke-width="3px"
+                         id="path96" />
+                      <a
+                         xlink:href="#table row"
+                         id="a96"
+                         transform="translate(-38)">
+                        <text
+                           x="595"
+                           y="164"
+                           class="comment"
+                           id="text96">table row</text>
+                      </a>
+                    </g>
+                  </g>
+                </g>
+                <path
+                   d="M661 189h10"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path98" />
+                <path
+                   d="M501.5 189a10 10 0 0 0 -10 10v37a10 10 0 0 0 10 10"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path99" />
+                <g
+                   id="g100">
+                  <path
+                     d="M501.5 246h159.5"
+                     stroke="#000000"
+                     fill-opacity="0"
+                     fill="#000000"
+                     stroke-width="3px"
+                     id="path100" />
+                </g>
+                <path
+                   d="M661 246a10 10 0 0 0 10 -10v-37a10 10 0 0 0 -10 -10"
+                   stroke="#000000"
+                   fill-opacity="0"
+                   fill="#000000"
+                   stroke-width="3px"
+                   id="path101" />
+              </g>
+            </g>
+            <g
+               id="g103"
+               transform="translate(-2)">
+              <path
+                 d="m 80,129 v 0"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path102" />
+              <path
+                 d="m 181,129 v 0"
+                 stroke="#000000"
+                 fill-opacity="0"
+                 fill="#000000"
+                 stroke-width="3px"
+                 id="path103" />
+              <a
+                 xlink:href="#table segment"
+                 id="a103"
+                 transform="translate(-40)">
+                <text
+                   x="130.5"
+                   y="134"
+                   class="comment"
+                   id="text103">table segment</text>
+              </a>
+            </g>
+          </g>
+          <path
+             d="M681 189a10 10 0 0 0 10 -10v-78a10 10 0 0 1 10 -10"
+             stroke="#000000"
+             fill-opacity="0"
+             fill="#000000"
+             stroke-width="3px"
+             id="path104" />
+        </g>
+        <g
+           id="g106">
+          <path
+             d="M60 31h0"
+             stroke="#000000"
+             fill-opacity="0"
+             fill="#000000"
+             stroke-width="3px"
+             id="path105" />
+          <path
+             d="M119 31h0"
+             stroke="#000000"
+             fill-opacity="0"
+             fill="#000000"
+             stroke-width="3px"
+             id="path106" />
+          <a
+             xlink:href="#segment"
+             id="a106">
+            <text
+               x="71.5"
+               y="36"
+               class="comment"
+               id="text106">segment</text>
+          </a>
+        </g>
+      </g>
+      <path
+         d="M701 91h10"
+         stroke="#000000"
+         fill-opacity="0"
+         fill="#000000"
+         stroke-width="3px"
+         id="path107" />
+      <path
+         d="M60 91a10 10 0 0 0 -10 10v170a10 10 0 0 0 10 10"
+         stroke="#000000"
+         fill-opacity="0"
+         fill="#000000"
+         stroke-width="3px"
+         id="path108" />
+      <g
+         class="terminal"
+         id="g110">
+        <path
+           d="M60 281h306.25"
+           stroke="#000000"
+           fill-opacity="0"
+           fill="#000000"
+           stroke-width="3px"
+           id="path109" />
+        <path
+           d="M394.75 281h306.25"
+           stroke="#000000"
+           fill-opacity="0"
+           fill="#000000"
+           stroke-width="3px"
+           id="path110" />
+        <rect
+           x="366.25"
+           y="270"
+           width="28.5"
+           height="22"
+           rx="10"
+           ry="10"
+           stroke="#000000"
+           fill="#FEFFDF"
+           stroke-width="3px"
+           id="rect110" />
+        <text
+           x="376.5"
+           y="285"
+           id="text110">+</text>
+      </g>
+      <path
+         d="M701 281a10 10 0 0 0 10 -10v-170a10 10 0 0 0 -10 -10"
+         stroke="#000000"
+         fill-opacity="0"
+         fill="#000000"
+         stroke-width="3px"
+         id="path111" />
+    </g>
+    <path
+       d="M711 91h10"
+       stroke="#000000"
+       fill-opacity="0"
+       fill="#000000"
+       stroke-width="3px"
+       id="path112" />
+    <path
+       d="M 721 91 h 20 m 0 -10 v 20"
+       stroke="#000000"
+       fill-opacity="0"
+       fill="#000000"
+       stroke-width="3px"
+       id="path113" />
+  </g>
+</svg>
