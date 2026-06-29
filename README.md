@@ -215,7 +215,7 @@ letter       = "A" | "B" | "C" | "D" | "E" | "F" | "G"
 digit        = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
 ```
 
-## Oder of `Segment`s
+## Order of `Segment`s
 
 Applications rendering PAC-IDs and their associated T-REX are often constrained in display space and may show only some segments. It is RECOMMENDED that applications render segments in their defined order. T-REX producers SHOULD therefore order segments by descending importance, with the most relevant information first.
 
