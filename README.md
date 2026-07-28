@@ -61,8 +61,6 @@ Example `T-REX`, containing a start date (22 FEB 2024 17:48), a duration (0 min)
 START$T.D:20240222T1748+DURATION$MIN:0+MODE$T.A:MANUAL
 ```
 
-
-
 ### Table Segment
 Since tabular data is a common occurence in laboratories, tables are supported by `T-REX`. 
 
@@ -107,6 +105,27 @@ COND$SIE:TEMP$KEL::
 1.5:295
 ```
 
+### Empty (Null) Values
+
+The `value` of a `segment` MAY be empty, regardless of `type`. An empty `value` means the value for this `key` is not defined ("null") — for example because a measurement was not taken, or because a field of a fixed template does not apply to this particular record.
+
+An empty `value` is distinct from the `E` type. `E` signals that a value was expected but could not be produced due to an error (e.g. a disconnected sensor); an empty `value` makes no claim about *why* the value is missing.
+
+Example: `MODE$T.A:` — the `MODE` key is present, but has no assigned value.
+
+In a `value segment`, an empty `value` and omitting the `segment` entirely both convey that no information is available for that `key`. Since omitting the `segment` is simpler and shorter, `T-REX` producers SHOULD omit the `segment` rather than emit one with an empty `value`, unless there is a specific reason to keep the `key` present (e.g. a fixed reporting template).
+
+In a `table segment`, the `type` of a column is fixed once in the `table header` for all `table row`s, so an individual `table row` can neither switch a single cell to `E` nor be omitted without also losing its other, valid cells. An empty `value` is therefore the standard way to represent a missing data point in a `table row` while preserving alignment with the `table header`.
+
+Example `T-REX` table where the pH could not be measured for one data point (empty cell in the second row):
+
+```
+TIT$$                        < table key
+VOL$MLT:PH$C62::             < table header
+0.0:2.44::                   < table row
+4.0:::                       < table row, pH value empty ("4.0:" followed by the "::" row separator)
+8.0:4.33                     < table row
+```
 
 ### `Key`s
 
@@ -173,12 +192,12 @@ tablerow       = value, { ":", value } ;
 tablekey    = alphanumeric, {punctuation | alphanumeric} ;
 key          = alphanumeric, {punctuation | alphanumeric} ;
 type         = numericunit | alphanumerictype | texttype | booltype | datetype | binarytype | error;
-value        = numericvalue | alphanumericvalue| textvalue | boolvalue | datevalue | binaryvalue | errorvalue;
+value        = "" | numericvalue | alphanumericvalue| textvalue | boolvalue | datevalue | binaryvalue | errorvalue; (* "" represents a null/not-defined value, valid regardless of type *)
 
 numericunit  = alphanumeric, alphanumeric, [alphanumeric]; (* Unit of Measure Common Code as defined by UN/CEFACT in REC 20 *)
 numericvalue = decimal | scientific ;
 alphanumerictype     = "T.A";
-alphanumericvalue    = { punctuation | alphanumeric };
+alphanumericvalue    = (punctuation | alphanumeric), {punctuation | alphanumeric};
 texttype     = "T.T";
 textvalue    = base36; (* UTF-8 string is encoded with Base36. *)
 booltype     = "T.B";
@@ -188,13 +207,13 @@ datevalue    = (date, [time]) | time ; (* Date and time are in ISO8601 Basic For
 binarytype   = "T.X";
 binaryvalue  = base36 ; (* Binary data is encoded with Base36. *)
 error        = "E" ;
-errorvalue   = { punctuation | alphanumeric } ;
+errorvalue   = (punctuation | alphanumeric), {punctuation | alphanumeric} ;
 
 
 decimal      = integer | ( ["-"] , {digit} , "." , digit , {digit} ) ;
 scientific   = decimal , "E" , integer ;
 integer      = ["-"] , digit, {digit} ;
-base36       = { alphanumeric } ;
+base36       = alphanumeric, { alphanumeric } ;
 date         = year, month, day ;
 time         = "T", hours , minutes, [seconds, [ ".",  milliseconds]] ;
 
