@@ -61,8 +61,6 @@ Example `T-REX`, containing a start date (22 FEB 2024 17:48), a duration (0 min)
 START$T.D:20240222T1748+DURATION$MIN:0+MODE$T.A:MANUAL
 ```
 
-
-
 ### Table Segment
 Since tabular data is a common occurence in laboratories, tables are supported by `T-REX`. 
 
@@ -106,6 +104,25 @@ CONDUCTIVITY$$
 COND$SIE:TEMP$KEL::
 1.5:295
 ```
+
+### Empty (Null) Values
+
+The `value` of a `segment` MAY be empty, regardless of `type`, meaning the value for this `key` is not defined. This differs from the `E` type, which specifically signals an error; an empty `value` implies nothing about the cause.
+
+Example: `MODE$T.A:STATE$T.A:OK` — the `MODE` key is present, but has no assigned value.
+
+In a `table segment`, an empty `value` is the standard way to mark a missing data point in a `table row`.
+
+Example `T-REX` table where the pH could not be measured for one data point (empty cell in the second row):
+```
+TIT$$                        < table key
+VOL$MLT:PH$C62::             < table header
+0.0:2.44::                   < table row
+4.0:::                       < table row, pH value empty ("4.0:" followed by the "::" row separator)
+8.0:4.33                     < table row
+```
+
+Producers of T-REX SHOULD omit the entire `value segment` rather than emit one with an empty `value`, unless a specific reason exists to keep the `key` present (e.g. a fixed reporting template).
 
 
 ### `Key`s
@@ -173,12 +190,12 @@ tablerow       = value, { ":", value } ;
 tablekey    = alphanumeric, {punctuation | alphanumeric} ;
 key          = alphanumeric, {punctuation | alphanumeric} ;
 type         = numericunit | alphanumerictype | texttype | booltype | datetype | binarytype | error;
-value        = numericvalue | alphanumericvalue| textvalue | boolvalue | datevalue | binaryvalue | errorvalue;
+value        = "" | numericvalue | alphanumericvalue| textvalue | boolvalue | datevalue | binaryvalue | errorvalue; (* "" represents a null/not-defined value, valid regardless of type *)
 
 numericunit  = alphanumeric, alphanumeric, [alphanumeric]; (* Unit of Measure Common Code as defined by UN/CEFACT in REC 20 *)
 numericvalue = decimal | scientific ;
 alphanumerictype     = "T.A";
-alphanumericvalue    = { punctuation | alphanumeric };
+alphanumericvalue    = (punctuation | alphanumeric), {punctuation | alphanumeric};
 texttype     = "T.T";
 textvalue    = base36; (* UTF-8 string is encoded with Base36. *)
 booltype     = "T.B";
@@ -188,13 +205,13 @@ datevalue    = (date, [time]) | time ; (* Date and time are in ISO8601 Basic For
 binarytype   = "T.X";
 binaryvalue  = base36 ; (* Binary data is encoded with Base36. *)
 error        = "E" ;
-errorvalue   = { punctuation | alphanumeric } ;
+errorvalue   = (punctuation | alphanumeric), {punctuation | alphanumeric} ;
 
 
 decimal      = integer | ( ["-"] , {digit} , "." , digit , {digit} ) ;
 scientific   = decimal , "E" , integer ;
 integer      = ["-"] , digit, {digit} ;
-base36       = { alphanumeric } ;
+base36       = alphanumeric, { alphanumeric } ;
 date         = year, month, day ;
 time         = "T", hours , minutes, [seconds, [ ".",  milliseconds]] ;
 
