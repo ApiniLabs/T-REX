@@ -109,16 +109,11 @@ COND$SIE:TEMP$KEL::
 
 The `value` of a `segment` MAY be empty, regardless of `type`, meaning the value for this `key` is not defined. This differs from the `E` type, which specifically signals an error; an empty `value` implies nothing about the cause.
 
-Example: `MODE$T.A:` — the `MODE` key is present, but has no assigned value.
-
-> **Design Choice:** In a `value segment`, producers SHOULD omit the entire `segment` rather than emit one with an empty `value`, unless a specific reason exists to keep the `key` present (e.g. a fixed reporting template).
+Example: `MODE$T.A:STATE$T.A:OK` — the `MODE` key is present, but has no assigned value.
 
 In a `table segment`, an empty `value` is the standard way to mark a missing data point in a `table row`.
 
-> **Design Choice:** A `table header` fixes each column's `type` for every `table row`, so a row can't switch one cell to `E` or be omitted without losing its other cells — an empty `value` is the only way to preserve alignment while marking the point missing.
-
 Example `T-REX` table where the pH could not be measured for one data point (empty cell in the second row):
-
 ```
 TIT$$                        < table key
 VOL$MLT:PH$C62::             < table header
@@ -126,6 +121,9 @@ VOL$MLT:PH$C62::             < table header
 4.0:::                       < table row, pH value empty ("4.0:" followed by the "::" row separator)
 8.0:4.33                     < table row
 ```
+
+Producers of T-REX SHOULD omit the entire `value segment` rather than emit one with an empty `value`, unless a specific reason exists to keep the `key` present (e.g. a fixed reporting template).
+
 
 ### `Key`s
 
